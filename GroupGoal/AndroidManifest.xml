@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="groupgoal.frontend"
     android:versionCode="1"
@@ -7,6 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +23,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreatingGoalListActivity"
+            android:label="@string/title_creatinggoal_list" >
+        </activity>
+        <activity
+            android:name=".CreatingGoalDetailActivity"
+            android:label="@string/title_creatinggoal_detail"
+            android:parentActivityName=".CreatingGoalListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="groupgoal.frontend.CreatingGoalListActivity" />
         </activity>
     </application>
 
